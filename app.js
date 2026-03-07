@@ -50,7 +50,7 @@ document.addEventListener('keydown', function(e) {
     else if (e.key === '/') setNumber('/')
     else if (e.key === 'Enter') cal()
     else if (e.key === 'Escape') ac()
-    else if (e.key === 'Backspace') clearLast()
+    else if (e.key === 'Backspace') clearOne()
 })
 
 
