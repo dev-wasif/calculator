@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calc-wrap">
+        <div class="flex">
+            <div class="inp"><input id="inp"  autocomplete="off" readonly value=""></div>
+            <div class="calBody">
+                <div class="row1">
+                    <button onclick="ac()">Ac</button>
+                    <button onclick="clearOne()">C</button>
+                    <button onclick="setNumber('%')" class="btn-percen">%</button>
+                    <button onclick="setNumber('/')" class="btn-op">÷</button>
+                </div>
+                <div class="row2">
+                    <button onclick="setNumber('7')">7</button>
+                    <button onclick="setNumber('8')">8</button>
+                    <button onclick="setNumber('9')">9</button>
+                    <button onclick="setNumber('*')" class="btn-op">×</button>
+                </div>
+                <div class="row3">
+                    <button onclick="setNumber('4')">4</button>
+                    <button onclick="setNumber('5')">5</button>
+                    <button onclick="setNumber('6')">6</button>
+                    <button onclick="setNumber('-')" class="btn-op">−</button>
+                </div>
+                <div class="row4">
+                    <button onclick="setNumber('1')">1</button>
+                    <button onclick="setNumber('2')">2</button>
+                    <button onclick="setNumber('3')">3</button>
+                    <button onclick="setNumber('+')" class="btn-op">+</button>
+                </div>
+                <div class="row5">
+                    <button onclick="setNumber('0')" class="btn-zero ">0</button>
+                    <button onclick="setNumber('.')" class="btn-dot">.</button>
+                    <button   onclick="cal()"  class="btn-eq">=</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal-overlay" id="modal">
+    <div class="modal">
+        <h2>⚠ EMPTY INPUT</h2>
+        <p>Please Enter Some Number</p>
+        <button onclick="closeModal()">OK</button>
+    </div>
+</div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
