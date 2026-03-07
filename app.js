@@ -37,10 +37,13 @@ function clearOne() {
     inp.value = (inp.value.slice(0, -1))
 }
 
-inp.blur()  
-
 document.addEventListener('keydown', function(e) {
-    e.preventDefault()  
+    const calculatorKeys = ['0','1','2','3','4','5','6','7','8','9',
+                           '.', '+', '-', '*', '/', 'Enter', 'Escape', 'Backspace']
+    
+    if (calculatorKeys.includes(e.key)) {
+        e.preventDefault()  // ✅ Sirf calculator keys block hongi
+    }
     
     if (e.key >= '0' && e.key <= '9') setNumber(e.key)
     else if (e.key === '.') setNumber('.')
@@ -52,9 +55,6 @@ document.addEventListener('keydown', function(e) {
     else if (e.key === 'Escape') ac()
     else if (e.key === 'Backspace') clearOne()
 })
-
-
-
 
 
 
