@@ -72,11 +72,11 @@ document.getElementById('modal').addEventListener('click', function(e) {
 
 
 
-function closeModal_er() {
+function closeModalEr() {
     document.getElementById('modal-er').classList.remove('show')
 }
 
 
 document.getElementById('modal-er').addEventListener('click', function(e) {
-    if (e.target === this) closeModal_er()
+    if (e.target === this) closeModalEr()
 })
