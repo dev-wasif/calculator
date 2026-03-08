@@ -11,21 +11,24 @@ function setNumber(val) {
       
     }else{
         inp.value += val
+    
     }
 
 }
 
 function cal() {
-    let output = eval(inp.value)
-    inp.value = output
-    if (inp.value == 0 ){
-        document.getElementById('modal').classList.add('show')
-    } 
-    else {
+    try {
         let output = eval(inp.value)
         inp.value = output
+
+        if (output == 0) {
+            document.getElementById('modal').classList.add('show')
+        }
+
+    } catch (error) {
+        document.getElementById('modal-er').classList.add('show')
     }
-    }
+}
     
 
 
@@ -64,5 +67,16 @@ function closeModal() {
 
 
 document.getElementById('modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal()
+})
+
+
+
+function closeModal() {
+    document.getElementById('modal-er').classList.remove('show')
+}
+
+
+document.getElementById('modal-er').addEventListener('click', function(e) {
     if (e.target === this) closeModal()
 })
