@@ -59,7 +59,7 @@ document.addEventListener('keydown', function(e) {
     else if (e.key === 'Backspace') clearOne()
 })
 
-
+//fuctions
 
 function closeModal() {
     document.getElementById('modal').classList.remove('show')
